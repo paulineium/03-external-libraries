@@ -7,8 +7,34 @@ body {
     margin: 0;
 }
 
-#animated-box {
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.square, .circle, .triangle {
     width: 100px;
     height: 100px;
+    position: relative;
+}
+
+.square {
     background-color: #3498db;
+}
+
+.circle {
+    background-color: #e74c3c;
+    border-radius: 50%;
+}
+
+.triangle {
+    background-color: #27ae60;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
